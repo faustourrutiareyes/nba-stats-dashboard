@@ -1,4 +1,4 @@
-# nba-stats-dashboard
+# NBA Stats Dashboard
 A dashboard to compare players in a single season, or teams' Off and Def rating across time.
 Check the tool [here](https://faustourrutia.shinyapps.io/project_nba/)
 
