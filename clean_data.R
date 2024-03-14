@@ -39,15 +39,6 @@ nba_teams_colors <- data.frame(
 )
 
 
-# nba_team_from_df = data.frame(teams = c(unique(player_season_data_per_game$tm)))
-# nba_team_from_df$color = unlist(nba_teams_colors[nba_team_from_df$teams])
-#
-# nba_teams_colors = gather(nba_teams_colors, key = 'team', value = 'color')
-# nba_team_from_df[which((unique(nba_team_from_df$teams) %in% nba_teams_colors$team) == F),]
-#
-# unique(nba_team_from_df$teams) %>% sort()
-# nba_teams_colors$team
-
 ### Analysis Starts Here
 player_season_data_per_game <- read.csv("Data/Player Per Game.csv")
 
@@ -101,7 +92,7 @@ player_season_data_per_game$player_all_info_text <- paste0(
 )
 
 
-write.csv(player_season_data_per_game, "Project_NBA/player_info.csv")
+write.csv(player_season_data_per_game, "project_deploy_files/player_info.csv")
 
 # SEPARATE
 # Data for Second Page
@@ -111,7 +102,7 @@ team_summ <- read.csv("Data/Team Summaries.csv")
 team_summ <- team_summ[(team_summ$abbreviation %in% nba_teams) & team_summ$season >= 1960, ]
 team_summ$color <- unlist(nba_teams_colors[team_summ$abbreviation])
 
-write.csv(team_summ, "Project_NBA/team_summ.csv")
+write.csv(team_summ, "project_deploy_files/team_summ.csv")
 
 unique(team_summ$team)
 

@@ -53,4 +53,9 @@ Data/
 deploy.R
 trial_error.R
 
+.venv
+
+unzip.py
+nba-aba-baa-stats.zip
+download-data.ipynb
 
